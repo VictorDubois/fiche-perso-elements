@@ -1,0 +1,75 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\title{Fiche personnage Éléments}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{tabularx}
+
+\usepackage[margin=2cm]{geometry}
+\begin{document}
+\date{}
+\maketitle
+\newcount\Force%
+\newcount\Dext%
+\newcount\Intell%
+\newcount\Esprit%
+\newcount\Chance%
+\Force=3%
+\Dext=5%
+\Intell=4%
+\Esprit=3%
+\Chance=3%
+\begin{table}[htb]
+\begin{tabularx}{\textwidth}{XX}
+Nom : Tom & Profession : Médecin \\
+Prévalence : Eau & PV : \the\numexpr\Force
+\end{tabularx}
+\end{table}
+\section{Caractéristiques}
+    \item Force [terre] : \the\numexpr\Force
+    \item Dext [eau] : \the\numexpr\Dext
+    \item Intell. [air] : \the\numexpr\Intell
+    \item Esprit [feu] : \the\numexpr\Esprit
+    \item Chance [lumière\textbf{}] : \the\numexpr\Chance
+    
+\section{Compétences}
+\begin{table}[htb]
+\label{tab:Compétences}
+\begin{tabular}{lcccc}
+\hline
+\textbf{Nom} & \textbf{Niveau} & \textbf{Bonus} & \textbf{Total} & \textbf{Précisions} \\ \hline
+Feu (esp) &  &  &  &  \\
+Terre (esp) &  &  &  &  \\
+Eau (esp) & 6 & \the\numexpr\Esprit & 9 &  \\
+Air (esp) &  &  &  &  \\
+Lumière (esp) &  &  &  &  \\
+Corps-à-corps (for) & 2 & \the\numexpr\Force & 5  \\
+Arme blanche (for) &  & \the\numexpr\Force &  &  \\
+Arme de jet (dex) &  & \the\numexpr\Dext &  &  \\
+Arme à feu (dex) &  & \the\numexpr\Dext &  &  \\
+Esquive (dex) [air] & 2 & \the\numexpr\Dext & 7 &  \\
+Conduite (int) & 2 & \the\numexpr\Intell & 6 & bateaux  \\
+Athlétisme (dex) & 2 & \the\numexpr\Dext & 7 &  \\
+Natation (for) [eau] & 2 & \the\numexpr\Force & 5 &  \\
+Escalade (for) &  & \the\numexpr\Force & 2 &  \\
+Art (esp) [feu]  & & \the\numexpr\Esprit & 2 &  \\
+Sport (for) &  & \the\numexpr\Force & 2 &  \\
+Filouterie (dex) & & \the\numexpr\Dext & 4 & \\
+Sorcellerie (cha) & 4 & \the\numexpr\Chance & 7 &  \\
+Connaissances (int) & 1 & \the\numexpr\Intell & 5 & biologie \\
+Dressage (esp) [terre] & & \the\numexpr\Esprit & 2 &  \\
+Social (int) & 3 & \the\numexpr\Intell & 7 &  \\
+Artisanat (int) &  & \the\numexpr\Intell & 3 &  \\
+Perception (esp) {[}lum{]} & 3 & \the\numexpr\Esprit & 6 &  \\
+Discrétion (dex) & 2 & \the\numexpr\Dext & 7 & \\
+Médecine (dex) & 5 & \the\numexpr\Dext & 10 &    
+\end{tabular}
+\end{table}
+
+\item Compétence de Source :
+
+\section{Background}
+\end{document}
+
